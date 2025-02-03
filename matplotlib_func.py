@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-def plot_data(fig, ax, data, color_array, label_array, label_array_enable_in, legend_enable, line_style, line_style_enable, x_unit, x_offset, y_unit, y_offset, plot_format, title, x_axis_title, y_axis_title, x_min, x_max, limits_enable_x,y_min, y_max, limits_enable_y, linewidth_assign):
+def plot_data(fig, ax, data, color_array, label_array, label_array_enable_in, legend_enable, line_style, line_style_enable, x_unit, x_offset, y_unit, y_offset, plot_format, title, x_axis_title, y_axis_title, x_min, x_max, limits_enable_x,y_min, y_max, limits_enable_y, linewidth_assign, subplots_en):
 
     # Loop through columns in data
     for i in range(0, len(data[0])-1, 2): # Iterate by 2 since 2 columns is 1 plot
@@ -33,9 +33,17 @@ def plot_data(fig, ax, data, color_array, label_array, label_array_enable_in, le
                 ax.loglog(x+x_offset, y+y_offset, color=color_array[i], label=label_assign, linestyle=line_style_assign, linewidth=linewidth_assign)
     
     # Add title and labels
-    ax.set_title(title, fontsize=13, fontweight= 'bold')
-    ax.set_xlabel(x_axis_title, fontsize=13, fontweight= 'bold')
-    ax.set_ylabel(y_axis_title, fontsize=13, fontweight='bold')
+    
+    # If subplots are on don't plot the title and x axis for each
+    if subplots_en:
+        # Change font sizes
+        ax.set_ylabel(y_axis_title, fontsize=8, fontweight='bold')
+    else:
+        ax.set_title(title, fontsize=13, fontweight= 'bold')
+        ax.set_xlabel(x_axis_title, fontsize=13, fontweight= 'bold')
+        ax.set_ylabel(y_axis_title, fontsize=13, fontweight='bold')
+        
+
 
 	# Axis editor data
     if limits_enable_x:
