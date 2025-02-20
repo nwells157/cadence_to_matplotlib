@@ -29,13 +29,13 @@ data = np.genfromtxt("./data.vcvs", delimiter=',', skip_header=6)
 # data = np.append(data, data1, axis=1)
 
 # Create label array with names for both x and y columns
-color_array_in = ["#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000"]
-label_array = ["High pass diff output", "Chip diff output", "chip diff output", "chip diff output"]
+color_array_in = ["#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000","#ff0000","#ff0000","#0000ff","#0000ff", "#8000ff", "#8000ff", "#00ffff", "#00ffff", "#ff8000", "#ff8000"]
+label_array = ["Label 1", "Label 1", "Label 2", "Label 2", "Label 3", "Label 3", "Label 4", "Label 4", "Label 5", "Label 5"]
 line_style_in = ["-", "--", "-.", ":"]
 
 # Defaults
 legend_enable_in = 0
-label_array_enable_in = 1
+label_array_enable_in = 0
 x_offset_in = 0
 y_offset_in = 0
 title_in =  'Title'
@@ -48,7 +48,7 @@ y_min_in = 0
 y_max_in = 0
 limits_enable_y_in = 0
 line_style_enable_in = 0
-linewidth_in = 3
+linewidth_in = 2
 subplots_en_in = 0
 
 # If 1 use array input; if 0 use string

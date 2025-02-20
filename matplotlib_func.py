@@ -85,9 +85,10 @@ def init_plot():
 def save_plot():
     # Auto save png with high dpi
     plt.savefig("plot_data",dpi=1000)
+    plt.savefig("plot_data.svg",  format='svg')
 
     # Automatically adjust the spacing to prevent overlap
-    plt.tight_layout()
+    plt.tight_layout(rect=[0, 0.05, 1, 1])
 
     # Display the plot
     plt.show()
